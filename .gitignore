@@ -1,2 +1,5 @@
 
 .vscode/settings.json
+.terraform/terraform.tfstate
+.terraform/plugins/registry.terraform.io/hashicorp/aws/3.13.0/linux_amd64/terraform-provider-aws_v3.13.0_x5
+.terraform/plugins/selections.json
