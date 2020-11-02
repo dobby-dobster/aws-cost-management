@@ -1,6 +1,6 @@
 # aws-cost-management
  
-### shutdown_instances
+### shutdown instances
 Scheduled CloudWatch rule which triggers a Lambda to power off instances where tags match critera
 
 ### delete orphaned volumes
