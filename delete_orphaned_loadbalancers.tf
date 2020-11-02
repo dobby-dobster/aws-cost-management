@@ -34,7 +34,7 @@ data "aws_iam_policy_document" "deletelbs_iam" {
 
 
 resource "aws_iam_policy" "deletelb_policy" {
-  name   = "lambda_deletelb_policy"
+  name   = "lambda_delete_lb_policy"
   path   = "/"
   policy = data.aws_iam_policy_document.deletelbs_iam.json
 }

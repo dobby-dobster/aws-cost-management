@@ -8,7 +8,7 @@ def main(event, context):
     elbv2_client = boto3.client('elbv2')
 
     #classic load balancers
-    victims = []
+
     bals = elb_client.describe_load_balancers()
     for elb in bals['LoadBalancerDescriptions']:
         if len(elb['Instances']) < 1:
@@ -18,7 +18,7 @@ def main(event, context):
                 print(ex)
 
     # application load balancers
-    victims = []
+
     bals = elbv2_client.describe_load_balancers()
     for elb in bals['LoadBalancers']:
         listeners = elbv2_client.describe_listeners(LoadBalancerArn=elb['LoadBalancerArn'])
@@ -31,7 +31,7 @@ def main(event, context):
                         print(ex)
     
     # application load balancers target groups
-    victims = []
+
     bals = elbv2_client.describe_target_groups()
     for tg in bals['TargetGroups']:
         for key, value in tg.items():

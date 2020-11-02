@@ -33,7 +33,7 @@ data "aws_iam_policy_document" "deletevolumes_iam" {
 
 
 resource "aws_iam_policy" "deletevolume_policy" {
-  name   = "lambda_deletevolume_policy"
+  name   = "lambda_delete_volume_policy"
   path   = "/"
   policy = data.aws_iam_policy_document.deletevolumes_iam.json
 }
